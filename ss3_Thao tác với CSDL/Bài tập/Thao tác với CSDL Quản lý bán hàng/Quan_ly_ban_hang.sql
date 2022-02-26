@@ -39,6 +39,6 @@ select * from customer as c
 where c.cID not in (select cID from `order`);
 
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)--
-select o.oID, o.oDate, sum(od.odQTY * p.pPrice) as gia_tien from `order` as o, orderdetail as od, product as p
-where o.oID = od.oID
+select o.oID, o.oDate, sum(od.odQTY * p.pPrice) as gia_tien 
+from ((`order` as o join orderdetail as od on o.oID = od.oID) join product as p on od.pID = p.pID)
 group by o.oID; 
