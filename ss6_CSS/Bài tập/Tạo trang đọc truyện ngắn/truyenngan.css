@@ -1,0 +1,17 @@
+h1{
+    background-color: seagreen;
+    color: darkorange;
+    margin-bottom: 30px;
+}
+h4{
+    color: darkorange;
+}
+img{
+    position: relative;
+    left:600px;
+    height: 500px;
+    width: 400px;
+}
+.cls{
+    color: seagreen;
+}
