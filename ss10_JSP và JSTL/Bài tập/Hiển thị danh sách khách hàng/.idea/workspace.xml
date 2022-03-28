@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f66ab86a-bfe8-40e9-b7d8-4eb878a7dc2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/customer/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/src/main/java/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ứng dụng Calculator/src/main/java/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Thực hành/Ứng dụng Từ điển đơn giản - jsp/src/main/webapp/dictionary.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_Tổng quan ứng dụng Web/Thực hành/Ứng dụng Từ điển đơn giản - Servlet/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_Tổng quan ứng dụng Web/Thực hành/Ứng dụng Từ điển đơn giản - Servlet/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/java/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_MVC Model/Thực hành/Quản lý khách hàng/src/main/webapp/error-404.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.60" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.60" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -162,6 +159,8 @@
       <option name="presentableId" value="Default" />
       <updated>1648039695068</updated>
       <workItem from="1648039699313" duration="2794000" />
+      <workItem from="1648044274965" duration="147000" />
+      <workItem from="1648206620326" duration="9000" />
     </task>
     <servers />
   </component>
