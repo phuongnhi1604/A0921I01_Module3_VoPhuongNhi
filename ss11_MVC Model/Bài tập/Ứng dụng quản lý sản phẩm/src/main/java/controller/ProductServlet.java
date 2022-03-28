@@ -159,7 +159,7 @@ public class ProductServlet extends HttpServlet {
         String name=request.getParameter("name");
         List<Product> products=productService.findByName(name);
         RequestDispatcher dispatcher;
-        if (products == null){
+        if (products.size()==0){
             dispatcher=request.getRequestDispatcher("view/error-404.jsp");
         }else {
             request.setAttribute("products",products);
