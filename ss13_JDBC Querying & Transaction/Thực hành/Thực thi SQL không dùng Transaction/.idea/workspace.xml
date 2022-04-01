@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="543e622d-4f72-4e6e-8a00-b59df9904b5d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Attach_Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Education_Degree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Servlet/FuramaResort/src/main/java/model/bean/Villa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/model/repository/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/model/repository/Impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/model/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/java/model/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/webapp/view/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/webapp/view/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gọi MySql Stored Procedures từ JDBC/src/main/webapp/view/user/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/model/repository/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/model/repository/Impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/model/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/java/model/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/webapp/view/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/webapp/view/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MySql JDBC Transaction/src/main/webapp/view/user/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/model/repository/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/model/repository/Impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/model/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/java/model/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/webapp/view/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/webapp/view/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thực thi SQL có dùng Transaction/src/main/webapp/view/user/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/Impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_JDBC &amp; CRUD/Bài tập/Cập nhật ứng dụng Quản lý User/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_JDBC &amp; CRUD/Bài tập/Cập nhật ứng dụng Quản lý User/.idea/gradle.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="276kNOug9CLqayeyCnwQ7EDjM0F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.60" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.60" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : user_management_nonTransaction-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="26a387e0-8d8d-4dca-9d59-bd1a7cda81da" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51381" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : user_management_nonTransaction-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="543e622d-4f72-4e6e-8a00-b59df9904b5d" name="Changes" comment="" />
+      <created>1648647885293</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648647885293</updated>
+      <workItem from="1648647887143" duration="1606000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
