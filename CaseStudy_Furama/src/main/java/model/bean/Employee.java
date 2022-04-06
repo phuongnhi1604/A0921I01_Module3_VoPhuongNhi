@@ -5,6 +5,7 @@ public class Employee extends Person{
     private int position_id;
     private int division_id;
     private double employee_salary;
+    private String username;
 
     public Employee() {
         super();
@@ -18,6 +19,33 @@ public class Employee extends Person{
         this.employee_salary = employee_salary;
     }
 
+    public Employee(int id, String name, String birthday, String id_card, String phone, String email, int education_degree_id, int position_id, int division_id, double employee_salary, String username) {
+        super(id, name, birthday, id_card, phone, email);
+        this.education_degree_id = education_degree_id;
+        this.position_id = position_id;
+        this.division_id = division_id;
+        this.employee_salary = employee_salary;
+        this.username = username;
+    }
+
+
+    public Employee(String name, String birthday, String id_card, String phone, String email, int education_degree_id, int position_id, int division_id, double employee_salary, String username) {
+        super(name, birthday, id_card, phone, email);
+        this.education_degree_id = education_degree_id;
+        this.position_id = position_id;
+        this.division_id = division_id;
+        this.employee_salary = employee_salary;
+        this.username = username;
+    }
+
+    public Employee(String name, String birthday, String id_card, String phone, String email, int education_degree_id, int position_id, int division_id, double employee_salary) {
+        super(name, birthday, id_card, phone, email);
+        this.education_degree_id = education_degree_id;
+        this.position_id = position_id;
+        this.division_id = division_id;
+        this.employee_salary = employee_salary;
+
+    }
     public int getEducation_degree_id() {
         return education_degree_id;
     }
@@ -48,5 +76,13 @@ public class Employee extends Person{
 
     public void setEmployee_salary(double employee_salary) {
         this.employee_salary = employee_salary;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

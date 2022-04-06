@@ -5,6 +5,7 @@ public abstract class Person {
     protected String name;
     protected String birthday;
     protected String id_card;
+    protected boolean gender;
     protected String phone;
     protected String email;
 
@@ -18,6 +19,41 @@ public abstract class Person {
         this.id_card = id_card;
         this.phone = phone;
         this.email = email;
+    }
+
+    public Person(String name, String birthday, String id_card, String phone, String email) {
+        this.name = name;
+        this.birthday = birthday;
+        this.id_card = id_card;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public Person(int id, String name, String birthday, String id_card, boolean gender, String phone, String email) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.id_card = id_card;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public Person(String name, String birthday, String id_card, boolean gender, String phone, String email) {
+        this.name = name;
+        this.birthday = birthday;
+        this.id_card = id_card;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public boolean isGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
     }
 
     public int getId() {

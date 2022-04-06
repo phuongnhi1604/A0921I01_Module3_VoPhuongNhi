@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="demo-1.0-SNAPSHOT1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Đóng gói thư viện/build/libs/demo-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
