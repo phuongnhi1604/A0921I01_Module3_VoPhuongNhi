@@ -16,6 +16,6 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public boolean add(Contract contract) {
-        return false;
+        return contractRepository.add(contract);
     }
 }

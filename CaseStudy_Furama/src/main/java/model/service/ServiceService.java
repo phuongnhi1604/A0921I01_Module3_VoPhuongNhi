@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface ServiceService {
     List<Service> findAll();
-    public boolean add(Service service);
+    public List<String> add(Service service);
+    List<Service> sortArea();
 }

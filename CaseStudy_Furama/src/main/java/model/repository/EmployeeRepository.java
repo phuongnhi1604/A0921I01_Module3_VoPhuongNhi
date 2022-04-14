@@ -10,5 +10,5 @@ public interface EmployeeRepository {
     public Employee getEmployeeById(int id);
     public boolean delete(int id);
     public boolean edit(Employee employee);
-    public List<Employee> search(String searchName, int searchPosition, int searchDivision);
+    public List<Employee> search(String searchName, String searchPosition, String searchDivision);
 }

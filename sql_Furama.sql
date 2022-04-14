@@ -139,4 +139,9 @@ foreign key(attach_service_id) references attach_service(attach_service_id),
 foreign key(contract_id) references contract(contract_id)
 );
 
-
+select cus.customer_id,cus.customer_name,cus.customer_birthday,cus.customer_gender,cus.customer_id_card,cus.customer_phone,cus.customer_email,cus.customer_address,atsv.attach_service_name,sv.service_name
+from ((((customer as cus left join contract as ct on cus.customer_id=ct.customer_id)
+join service sv on sv.service_id = ct.service_id)
+left join contract_detail as ctde on ct.contract_id=ctde.contract_id)
+left join attach_service atsv on atsv.attach_service_id = ctde.attach_service_id
+);

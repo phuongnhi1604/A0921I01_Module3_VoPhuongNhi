@@ -108,6 +108,7 @@
                 <div class="mb-3">
                     <label class="form-label">Full name: </label>
                     <input type="text" class="form-control" name="name" value="<c:out value='${customer.getName()}'/>">
+                    <span style="color: red; font-style: italic">${messList[0]}</span>
                 </div>
                 <div class="mb-3 w-50">
                     <label class="form-label">Birthday: </label>
@@ -128,14 +129,17 @@
                 <div class="mb-3">
                     <label class="form-label">Id_Card: </label>
                     <input type="text" class="form-control" name="id_card" value="<c:out value='${customer.getId_card()}'/>">
+                    <span style="color: red; font-style: italic">${messList[2]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Phone: </label>
                     <input type="text" class="form-control" name="phone" value="<c:out value='${customer.getPhone()}'/>">
+                    <span style="color: red; font-style: italic">${messList[1]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email: </label>
                     <input type="email" class="form-control" name="email" value="<c:out value='${customer.getEmail()}'/>">
+                    <span style="color: red; font-style: italic">${messList[3]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Address: </label>

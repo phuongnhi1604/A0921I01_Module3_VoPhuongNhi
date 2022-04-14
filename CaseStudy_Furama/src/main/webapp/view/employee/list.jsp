@@ -12,7 +12,18 @@
     <title>Danh sách nhân viên</title>
     <script src="jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+    <script src="jquery/jquery.dataTables.min.js"></script>
+    <script src="jquery/dataTables.bootstrap4.js"></script>
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tableCustomer').dataTable({
+                "dom": 'lrtip',
+                "lengthChange": false,
+                "pageLength": 5
+            });
+        });
+    </script>
     <style>
         a{
             text-decoration: none;
@@ -49,7 +60,7 @@
                     <a class="nav-link" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form action="/employees?action=search" method="post" class="d-flex mt-3" style="padding-right: 70px">
@@ -97,7 +108,8 @@
                     <label style="color: red">${mess}</label>
                 </c:if>
             </div>
-            <table class="table table-warning table-striped border-danger" border="1" style="border-collapse:  collapse">
+            <table id="tableCustomer" class="table table-warning table-striped border-danger" border="1" style="border-collapse: collapse">
+                <thead>
                 <tr>
                     <th>STT</th>
                     <th>Id</th>
@@ -116,6 +128,8 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
+                </thead>
+                <tbody>
                 <c:forEach items="${employeeList}" var="employee" varStatus="item">
                     <tr>
                         <td>${item.count}</td>
@@ -145,18 +159,47 @@
                             </c:if>
                         </c:forEach>
 
-                        <!--
-                        <td>${employee.getUsername()}</td>
-                        -->
-
                         <td><a href="/employees?action=edit&id=${employee.getId()}"><img src="https://img.icons8.com/bubbles/50/000000/edit.png"/></a></td>
-                        <td><a href="/employees?action=delete&id=${employee.getId()}"><img src="https://img.icons8.com/bubbles/50/000000/delete-forever.png"/></a></td>
+                        <td>
+                            <button type="button" class="btn" style="position:relative; bottom: 6px" onclick="infoDelete('${employee.getId()}','${employee.getName()}')" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <img src="https://img.icons8.com/bubbles/50/000000/delete-forever.png"/>
+                            </button>
+                        </td>
                     </tr>
                 </c:forEach>
+                </tbody>
             </table>
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa nhân viên</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/employees?action=delete" method="get">
+                <div class="modal-body">
+                    <span>Bạn có muốn xóa nhân viên tên: </span><span style="color: blue" id="employeeName"></span>
+                    <input type="text" id="employeeId" name="id" hidden>
+                    <input type="text" name="action" value="delete" hidden>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-warning">Xóa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("employeeName").innerText = name;
+        document.getElementById("employeeId").value = id;
+    }
+</script>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->

@@ -68,7 +68,7 @@
                     <a class="nav-link a1-color fs-5" href="/contracts?action=add">Add New Contract</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link a1-color fs-5" href="#">Item Two</a>
+                    <a class="nav-link a1-color fs-5" href="/contractDetails">Contract Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link a1-color fs-5" href="#">Item Three</a>

@@ -51,7 +51,7 @@
                     <a class="nav-link" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form class="d-flex mt-3" style="padding-right: 70px">
@@ -139,6 +139,7 @@
                 <div class="mb-3">
                     <label class="form-label">Number of floors: </label>
                     <input type="text" class="form-control" name="number_of_floors" placeholder="Enter number of floors">
+                    <span style="color: red; font-style: italic">${messList[0]}</span>
                 </div>
                 <button class="btn btn-warning">Save</button>
             </form>

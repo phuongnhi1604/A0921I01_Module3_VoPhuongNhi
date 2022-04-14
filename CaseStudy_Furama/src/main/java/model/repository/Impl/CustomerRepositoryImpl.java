@@ -17,7 +17,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     private static final String FIND_CUSTOMER_BY_ID = "select * from customer where customer_id=?;";
     private static final String UPDATE_CUSTOMER_BY_ID="update customer set customer_type_id=?, customer_name=?, customer_birthday=?, customer_gender=?,customer_id_card=?, customer_phone=?,customer_email=?,customer_address=? where customer_id=?;";
     private static final String DELETE_CUSTOMER="delete from customer where customer_id=?;";
-    private static final String SEARCH = "select * from customer where customer_type_id = ? and customer_name like ? and customer_address like ?;";
+    private static final String SEARCH = "select * from customer where customer_type_id like ? and customer_name like ? and customer_address like ?;";
 
     @Override
     public List<Customer> findAll() {
@@ -134,12 +134,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public List<Customer> search(int searchType, String searchName, String searchAddress) {
+    public List<Customer> search(String searchType, String searchName, String searchAddress) {
         List<Customer> customers=new ArrayList<>();
         Connection connection= BaseRepository.getConnection();
         try {
             PreparedStatement preparedStatement=connection.prepareStatement(SEARCH);
-            preparedStatement.setInt(1, searchType);
+            preparedStatement.setString(1, "%"+searchType+"%");
             preparedStatement.setString(2,"%"+searchName+"%");
             preparedStatement.setString(3,"%"+searchAddress+"%");
 
@@ -162,6 +162,4 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
         return customers;
     }
-
-
 }

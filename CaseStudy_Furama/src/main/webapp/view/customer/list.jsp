@@ -12,15 +12,28 @@
     <title>Danh sách khách hàng</title>
     <script src="jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+    <script src="jquery/jquery.dataTables.min.js"></script>
+    <script src="jquery/dataTables.bootstrap4.js"></script>
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tableCustomer').dataTable({
+                "dom": 'lrtip',
+                "lengthChange": false,
+                "pageLength": 5
+            });
+        });
+    </script>
     <style>
-        a{
+        a {
             text-decoration: none;
         }
-        .a-color{
+
+        .a-color {
             color: dimgray;
         }
-        .a1-color{
+
+        .a1-color {
             color: white;
         }
     </style>
@@ -49,33 +62,33 @@
                     <a class="nav-link" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form action="/customers?action=search" method="post" class="d-flex mt-3" style="padding-right: 70px">
                 <input class="form-control me-2" type="text" placeholder="Enter name" name="searchName">
                 <select class="form-select me-2" name="searchType">
-                    <option value="" >Choose Type</option>
+                    <option value="">Choose Type</option>
                     <c:forEach items="${customerTypeList}" var="customerType">
                         <option value="${customerType.getCustomer_type_id()}">${customerType.getCustomer_type()}</option>
                     </c:forEach>
                 </select>
                 <input class="form-control me-2" type="text" placeholder="Enter address" name="searchAddress">
-                <button class="btn btn-outline-success" >Search</button>
+                <button class="btn btn-outline-success">Search</button>
             </form>
         </div>
     </div>
 </nav>
 
-<div class="container-fluid" >
+<div class="container-fluid">
     <div class="row" style="min-height: 100%">
         <div class="col-md-2 mt-3 bg-gradient" style="background-color: #FADA5C">
-            <ul class="nav flex-column" >
+            <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link a1-color fs-5" href="/customers?action=add">Add New Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link a1-color fs-5" href="#">Item Two</a>
+                    <a class="nav-link a1-color fs-5" href="/customerUseServices">Customer Use Service List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link a1-color fs-5" href="#">Item Three</a>
@@ -90,7 +103,9 @@
                     <label style="color: red">${mess}</label>
                 </c:if>
             </div>
-            <table class="table table-warning table-striped border-danger" border="1" style="border-collapse:  collapse">
+            <table id="tableCustomer" class="table table-warning table-striped border-danger" border="1"
+                   style="border-collapse:  collapse">
+                <thead>
                 <tr>
                     <th>STT</th>
                     <th>Id</th>
@@ -105,6 +120,8 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
+                </thead>
+                <tbody>
                 <c:forEach items="${customerList}" var="customer" varStatus="item">
                     <tr>
                         <td>${item.count}</td>
@@ -127,14 +144,49 @@
                         <td>${customer.getPhone()}</td>
                         <td>${customer.getEmail()}</td>
                         <td>${customer.getCustomer_address()}</td>
-                        <td><a href="/customers?action=edit&id=${customer.getId()}"><img src="https://img.icons8.com/bubbles/50/000000/edit.png"/></a></td>
-                        <td><a href="/customers?action=delete&id=${customer.getId()}"><img src="https://img.icons8.com/bubbles/50/000000/delete-forever.png"/></a></td>
+                        <td><a href="/customers?action=edit&id=${customer.getId()}"><img
+                                src="https://img.icons8.com/bubbles/50/000000/edit.png"/></a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn" style="position:relative; bottom: 6px" onclick="infoDelete('${customer.getId()}','${customer.getName()}')" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <img src="https://img.icons8.com/bubbles/50/000000/delete-forever.png"/>
+                            </button>
+                        </td>
                     </tr>
                 </c:forEach>
+                </tbody>
             </table>
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa khách hàng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/customers?action=delete" method="get">
+            <div class="modal-body">
+                <span>Bạn có muốn xóa khách hàng tên: </span><span style="color: blue" id="customerName"></span>
+                <input type="text" id="customerId" name="id" hidden>
+                <input type="text" name="action" value="delete" hidden>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                <button type="submit" class="btn btn-warning">Xóa</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("customerName").innerText = name;
+        document.getElementById("customerId").value = id;
+    }
+</script>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->

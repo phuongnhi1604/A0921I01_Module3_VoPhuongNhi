@@ -1,10 +1,12 @@
 package model.service.Impl;
 
+import common.Validation;
 import model.bean.Customer;
 import model.repository.CustomerRepository;
 import model.repository.Impl.CustomerRepositoryImpl;
 import model.service.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
@@ -15,8 +17,45 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean insert(Customer customer) {
-        return customerRepository.insert(customer);
+    public List<String> insert(Customer customer) {
+        List<String> messList = new ArrayList<>();
+        boolean check= true;
+        // check tên
+        if (Validation.checkName(customer.getName())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Name is not in the correct format!");
+        }
+
+        //check phone
+        if (Validation.checkPhone(customer.getPhone())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The NumberPhone is not in the correct format.");
+        }
+
+        //check id_card
+        if (Validation.checkIdCard(customer.getId_card())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Id_Card is not in the correct format.");
+        }
+
+        //check email
+        if (Validation.checkEmail(customer.getEmail())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Email is not in the correct format!");
+        }
+        if (check){
+            // cho lưu
+            customerRepository.insert(customer);
+        }
+        return messList;
     }
 
     @Override
@@ -30,12 +69,49 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean edit(Customer customer) {
-        return customerRepository.edit(customer);
+    public List<String>  edit(Customer customer) {
+        List<String> messList = new ArrayList<>();
+        boolean check= true;
+        // check tên
+        if (Validation.checkName(customer.getName())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Name is not in the correct format!");
+        }
+
+        //check phone
+        if (Validation.checkPhone(customer.getPhone())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The NumberPhone is not in the correct format.");
+        }
+
+        //check id_card
+        if (Validation.checkIdCard(customer.getId_card())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Id_Card is not in the correct format.");
+        }
+
+        //check email
+        if (Validation.checkEmail(customer.getEmail())){
+            messList.add("");
+        }else {
+            check=false;
+            messList.add("The Email is not in the correct format!");
+        }
+        if (check){
+            // cho lưu
+            customerRepository.edit(customer);
+        }
+        return messList;
     }
 
     @Override
-    public List<Customer> search(int searchType, String searchName, String searchAddress) {
+    public List<Customer> search(String searchType, String searchName, String searchAddress) {
         return customerRepository.search(searchType,searchName,searchAddress);
     }
 }

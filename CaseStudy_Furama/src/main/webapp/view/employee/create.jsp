@@ -51,7 +51,7 @@
                     <a class="nav-link" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form class="d-flex mt-3" style="padding-right: 70px">
@@ -90,6 +90,7 @@
                 <div class="mb-3">
                     <label class="form-label">Full name: </label>
                     <input type="text" class="form-control" name="name" placeholder="Enter name">
+                    <span style="color: red; font-style: italic">${messList[0]}</span>
                 </div>
 
                 <div class="mb-3 w-50">
@@ -100,21 +101,25 @@
                 <div class="mb-3">
                     <label class="form-label">Id_Card: </label>
                     <input type="text" class="form-control" name="id_card" placeholder="Enter Id_Card">
+                    <span style="color: red; font-style: italic">${messList[1]}</span>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Salary: </label>
                     <input type="text" class="form-control" name="salary" placeholder="Enter salary">
+                    <span style="color: red; font-style: italic">${messList[2]}</span>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Phone: </label>
                     <input type="text" class="form-control" name="phone" placeholder="Enter phone number">
+                    <span style="color: red; font-style: italic">${messList[3]}</span>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Email: </label>
                     <input type="text" class="form-control" name="email" placeholder="Enter email">
+                    <span style="color: red; font-style: italic">${messList[4]}</span>
                 </div>
 
                 <label class="form-label">Position: </label>
@@ -143,7 +148,7 @@
                     <input type="text" class="form-control" name="username" placeholder="Enter username">
                 </div>
                 -->
-                <button class="btn btn-warning">Save</button>
+                <button class="btn btn-warning" style="margin-top: 3px">Save</button>
             </form>
         </div>
     </div>

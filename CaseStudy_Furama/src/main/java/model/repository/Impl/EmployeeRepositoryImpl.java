@@ -23,7 +23,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             "education_degree_id,division_id from employee where employee_id=?;";
     private static final String DELETE_EMPLOYEE = "delete from employee where employee_id=?;";
     private static final String SEARCH_EMPLOYEE = "select employee_id,employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,position_id,\n" +
-            "education_degree_id,division_id from employee where employee_name like ? and position_id =? and  division_id=?;";
+            "education_degree_id,division_id from employee where employee_name like ? and position_id like ? and  division_id like ?;";
     @Override
     public List<Employee> findAll() {
         List<Employee> employeeList = new ArrayList<>();
@@ -143,14 +143,14 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> search(String searchName, int searchPosition, int searchDivision) {
+    public List<Employee> search(String searchName, String searchPosition, String searchDivision) {
         List<Employee> employeeList = new ArrayList<>();
         Connection connection = BaseRepository.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_EMPLOYEE);
             preparedStatement.setString(1,"%"+searchName+"%");
-            preparedStatement.setInt(2,searchPosition);
-            preparedStatement.setInt(3,searchDivision);
+            preparedStatement.setString(2,"%"+searchPosition+"%");
+            preparedStatement.setString(3,"%"+searchDivision+"%");
 
             ResultSet resultSet=preparedStatement.executeQuery();
             while (resultSet.next()){
@@ -171,7 +171,6 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return employeeList;
     }
 }

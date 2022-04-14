@@ -51,7 +51,7 @@
                     <a class="nav-link" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form class="d-flex mt-3" style="padding-right: 70px">
@@ -95,6 +95,7 @@
                 <div class="mb-3">
                     <label class="form-label">Full name: </label>
                     <input type="text" class="form-control" name="name" value="<c:out value='${employee.getName()}'/>">
+                    <span style="color: red; font-style: italic">${messList[0]}</span>
                 </div>
                 <div class="mb-3 w-50">
                     <label class="form-label">Birthday: </label>
@@ -105,21 +106,25 @@
                     <label class="form-label">Id_Card: </label>
                     <input type="text" class="form-control" name="id_card"
                            value="<c:out value='${employee.getId_card()}'/>">
+                    <span style="color: red; font-style: italic">${messList[1]}</span>
                 </div>
                 <div class="=mb-3">
                     <label class="form-label">Salary: </label>
                     <input type="text" class="form-control" name="salary"
                            value="<c:out value='${employee.getEmployee_salary()}'/>">
+                    <span style="color: red; font-style: italic">${messList[2]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Phone: </label>
                     <input type="text" class="form-control" name="phone"
                            value="<c:out value='${employee.getPhone()}'/>">
+                    <span style="color: red; font-style: italic">${messList[3]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email: </label>
                     <input type="email" class="form-control" name="email"
                            value="<c:out value='${employee.getEmail()}'/>">
+                    <span style="color: red; font-style: italic">${messList[4]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Position: </label>

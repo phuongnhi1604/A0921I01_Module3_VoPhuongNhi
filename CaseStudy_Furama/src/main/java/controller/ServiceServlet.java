@@ -15,6 +15,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.List;
 
 @WebServlet(name = "ServiceServlet", urlPatterns = "/services")
 public class ServiceServlet extends HttpServlet {
@@ -31,8 +32,25 @@ public class ServiceServlet extends HttpServlet {
             case "add":
                 showCreateForm(request,response);
                 break;
+            case "sort":
+                showSortList(request,response);
+                break;
             default:
                 listService(request,response);
+        }
+    }
+
+    private void showSortList(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/service/sort.jsp");
+        request.setAttribute("serviceList",serviceService.sortArea());
+        request.setAttribute("serviceTypeList",serviceTypeService.findAll());
+        request.setAttribute("rentTypeList",rentTypeService.findAll());
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +79,6 @@ public class ServiceServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -90,13 +107,21 @@ public class ServiceServlet extends HttpServlet {
         int number_of_floors = Integer.parseInt(request.getParameter("number_of_floors"));
 
         Service service = new Service(name,area,max_people,rent_type_id,service_type_id,standard_room,description,pool_area,number_of_floors);
-        boolean check = serviceService.add(service);
+        List<String> messList = serviceService.add(service);
+        boolean check =true;
+        for (String mess: messList) {
+            if (!mess.equals("")){
+                check =false;
+            }
+        }
         String mess = "Added new service successfully";
         if (!check){
             mess = "Add new service unsuccessfully";
         }
         request.setAttribute("mess",mess);
-
+        request.setAttribute("messList",messList);
+        request.setAttribute("serviceTypeList",serviceTypeService.findAll());
+        request.setAttribute("rentTypeList",rentTypeService.findAll());
         try {
             request.getRequestDispatcher("view/service/create.jsp").forward(request,response);
         } catch (ServletException e) {

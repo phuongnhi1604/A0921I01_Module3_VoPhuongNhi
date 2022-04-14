@@ -88,6 +88,11 @@
                     </c:if>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Id: </label>
+                    <input type="text" class="form-control" name="id" placeholder="Enter id">
+
+                </div>
+                <div class="mb-3">
                     <label class="form-label">Customer Type: </label>
                     <select class="form-select" name="customer_type_id">
                         <c:forEach items="${customerTypeList}" var="customerType">
@@ -98,6 +103,7 @@
                 <div class="mb-3">
                     <label class="form-label">Full name: </label>
                     <input type="text" class="form-control" name="name" placeholder="Enter name">
+                    <span style="color: red; font-style: italic">${messList[0]}</span>
                 </div>
                 <div class="mb-3 w-50">
                     <label class="form-label">Birthday: </label>
@@ -111,14 +117,17 @@
                 <div class="mb-3">
                     <label class="form-label">Id_Card: </label>
                     <input type="text" class="form-control" name="id_card" placeholder="Enter Id_Card">
+                    <span style="color: red; font-style: italic">${messList[2]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Phone: </label>
                     <input type="text" class="form-control" name="phone" placeholder="Enter phone number">
+                    <span style="color: red; font-style: italic">${messList[1]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email: </label>
                     <input type="text" class="form-control" name="email" placeholder="Enter email">
+                    <span style="color: red; font-style: italic">${messList[3]}</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Address: </label>

@@ -15,6 +15,7 @@ public class ServiceRepositoryImpl implements ServiceRepository {
     private static final String FIND_ALL = "select * from service";
     private static final String ADD_SERVICE= "insert into service(service_name,service_area,service_max_people,rent_type_id,service_type_id,stardard_room,description_other_convenience,pool_area,number_of_floors)\n" +
             "values(?,?,?,?,?,?,?,?,?); ";
+    private static final String SORT_BY_AREA = "select * from service order by service_area asc;";
     @Override
     public List<Service> findAll() {
         List<Service> services=new ArrayList<>();
@@ -64,5 +65,32 @@ public class ServiceRepositoryImpl implements ServiceRepository {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public List<Service> sortArea() {
+        List<Service> services=new ArrayList<>();
+        Connection connection=BaseRepository.getConnection();
+        try {
+            PreparedStatement preparedStatement=connection.prepareStatement(SORT_BY_AREA);
+            ResultSet resultSet= preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt("service_id");
+                String name = resultSet.getString("service_name");
+                Double area = resultSet.getDouble("service_area");
+                int max_people = resultSet.getInt("service_max_people");
+                int rent_type_id = resultSet.getInt("rent_type_id");
+                int service_type_id = resultSet.getInt("service_type_id");
+                String standard_room = resultSet.getString("stardard_room");
+                String description = resultSet.getString("description_other_convenience");
+                Double pool_area = resultSet.getDouble("pool_area");
+                int number_of_floors = resultSet.getInt("number_of_floors");
+                Service service = new Service(id,name,area,max_people,rent_type_id,service_type_id,standard_room,description,pool_area,number_of_floors);
+                services.add(service);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return services;
     }
 }

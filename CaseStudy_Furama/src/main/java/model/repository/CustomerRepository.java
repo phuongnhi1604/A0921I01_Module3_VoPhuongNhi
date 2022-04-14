@@ -10,5 +10,6 @@ public interface CustomerRepository {
     public Customer getCustomerById(int id);
     public boolean delete(int id);
     public boolean edit(Customer customer);
-    public List<Customer> search(int searchType, String searchName, String searchAddress);
+    public List<Customer> search(String searchType, String searchName, String searchAddress);
+
 }

@@ -49,7 +49,7 @@
                     <a class="nav-link active" aria-current="page" href="/services">Service</a>
                 </li>
                 <li class="nav-item mt-3 fs-5">
-                    <a class="nav-link" href="#">Contract</a>
+                    <a class="nav-link" href="/contracts">Contract</a>
                 </li>
             </ul>
             <form class="d-flex mt-3" style="padding-right: 70px">
@@ -83,7 +83,7 @@
                     <th>STT</th>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Area</th>
+                    <th>Area <a href="/services?action=sort"><img src="https://img.icons8.com/office/16/000000/generic-sorting-2.png"/></a></th>
                     <th>Max people</th>
                     <th>Rent type</th>
                     <th>Service type</th>

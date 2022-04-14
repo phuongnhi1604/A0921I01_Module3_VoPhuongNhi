@@ -13,6 +13,9 @@ import java.util.List;
 
 public class ContractRepositoryImpl implements ContractRepository  {
     private static final String FIND_ALL = "select * from contract;";
+    private static final String ADD_CONTRACT = "insert into contract(contract_start_day,contract_end_day,contract_deposit,contract_total_money,employee_id,customer_id,service_id)\n" +
+            "values (?,?,?,?,?,?,?);";
+    
     @Override
     public List<Contract> findAll() {
         List<Contract> contractList = new ArrayList<>();
@@ -41,6 +44,21 @@ public class ContractRepositoryImpl implements ContractRepository  {
 
     @Override
     public boolean add(Contract contract) {
-        return false;
+        boolean rowUpdated = false;
+        Connection connection = BaseRepository.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(ADD_CONTRACT);
+            preparedStatement.setString(1,contract.getContract_start_date());
+            preparedStatement.setString(2,contract.getContract_end_date());
+            preparedStatement.setDouble(3,contract.getContract_deposit());
+            preparedStatement.setDouble(4,contract.getContract_total_money());
+            preparedStatement.setInt(5,contract.getEmployee_id());
+            preparedStatement.setInt(6,contract.getCustomer_id());
+            preparedStatement.setInt(7,contract.getService_id());
+            rowUpdated = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rowUpdated;
     }
 }
